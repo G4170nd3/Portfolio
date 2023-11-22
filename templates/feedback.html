@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>Feedbacks</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/feedback.css') }}">
+</head>
+<body>
+	<div id="container">
+		<table>
+			<tr>
+				<th>Timestamp</th>
+				<th>Feedback</th>
+			</tr>
+			{% for item in feedback_data %}
+				<tr>
+					<td>{{ item['Timestamp'] }}</td>
+					<td>{{ item['message'] }}</td>
+				</tr>
+			{% endfor %}
+		</table>
+		<a href='/logout' id="logout">Logout</a>
+	</div>
+
+</body>
+</html>

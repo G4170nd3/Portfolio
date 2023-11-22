@@ -1,0 +1,54 @@
+body {
+	background-color: #111111;
+}
+form {
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+}
+.hidden-div {
+	opacity: 0;
+}
+#background {
+	display: flex;
+	height: -webkit-fill-available;
+	justify-content: space-evenly;
+	color: white;
+	font-family: monospace;
+}
+#main-container {
+	display: flex;
+	flex-direction: column;
+	margin: auto 10rem;
+}
+button {
+	width: 40%;
+	margin: 1rem 0;
+	background-color: transparent;
+	border: 1px solid white;
+	color: white;
+	padding: 1rem 0.5rem;
+	cursor: pointer;
+	transition: all 0.1s ease-in;
+}
+button:hover {
+	background-color: lightblue;
+	color: black;
+}
+input[type='text'], input[type='password'] {
+	background-color: transparent;
+	color: white;
+	padding: 1rem;
+	border: none;
+	border-bottom: 1px solid white;
+}
+input[type='text']:focus, input[type='password']:focus {
+	outline: none;
+}
+#error {
+	display: flex;
+	justify-content: center;
+	color: white;
+	border: 1px solid red;
+	padding: 1rem;
+}

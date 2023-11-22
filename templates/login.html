@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>Admin Login</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/login.css') }}">
+</head>
+<body>
+	<div id="background">
+		<div id="main-container">
+			<form id="loginForm">
+				<input type="text" name="user" id="username" placeholder="Username" />
+				<input type="password" name="pass" id="password" placeholder="Password" />
+				<button name="submit">Submit</button>
+			</form>
+		</div>
+	</div>
+<script type="text/javascript" src="{{ url_for('static',filename='js/login.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<html>
+<head>
+    <title>Satyam Negi</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/styles.css') }}" />
+</head>
+
+<body>
+<div class="background">
+    <div id="home-section" class="subsection flex-col">
+        <div id="home-content" class="section-container flex-col">
+            <div>
+                <div><span>Hello world! Myself...</span></div>
+                <div id="my-name"><span>Satyam Negi</span></div>
+                <span id="aka-text" class="hidden-div">aka G4170nd3</span>
+            </div>
+        </div>
+        <div id="home-scroll" class="scroll-bot">
+            <div id="main-home-scroll" class="scroller hidden-div" onclick="location.href='#about-section'">v</div>
+        </div>   
+    </div>
+    <div id="about-section" class="subsection flex-row">
+        <div id="about-content" class="section-container flex-col">
+            <div id="about-me-heading" class="flex-col"><h1><span>A</span><span>B</span><span>O</span><span>U</span><span>T</span> <span>M</span><span>E</span></h1></div>
+            <div id="about-me">
+                <p>Hey there!, my name is Satyam and I am an individual keen to learn more and more (and more?) about how stuff works. Currently enrolled in the final year of my B.E degree in CSE, I'm a greedy learner who love to explore things around me.</p>
+                <p>Focussing on forensics, reverse engineering and networking for the time being, I eventually dream to gain expertise in all domains under Cyber Security.</p>
+                <p>To get in touch or know more about me, check out my<a href="#socials">&nbsp;socials.</a></p>
+            </div>
+        </div>
+        <div id="about-scroll" class="scroll-side">
+            <div class="scroller" onclick="location.href='#writeups-section'">v</div>
+        </div>
+    </div>
+    <div id="writeups-section" class="subsection flex-col">
+        <div id="writeups" class="writeup-container flex-col">
+            <div id="writeup-heading-text"><h3>Some of my ctf writeups!</h3></div>
+            <div class="writeup-controller flex-col">
+                <div id="writeup-content-controller">
+                    <button id="writeup-mainmenu" disabled>
+                        < Back
+                    </button>
+                </div>
+                <div id="writeup-scroller">
+                    <button id="writeup-scroll-left" class="wupsc" disabled>
+                        <
+                    </button>
+                    <div id="writeup-section">
+                        
+                    </div>
+                    <button id="writeup-scroll-right" class="wupsc">
+                        >
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="scroll3 scroll-bot">
+            <a href="#socials-section">v</a>
+        </div>
+
+    </div>
+    <div id="socials-section" class="subsection">
+        <div id="socials" class="section-container flex-col">
+            <h1><span>T</span><span>A</span><span>L</span><span>K</span> <span>T</span><span>O</span> <span>M</span><span>E</span><span>?</span></h1>
+            <div class="social-link-container flex-row">
+                <div class="social-link-col">
+                    <a href="https://github.com/G4170nd3" target="_blank">
+                        <div class="social-link">
+                            <img src="/static/images/icons/github.png" class="icon" /> &nbsp;&nbsp;Github
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/satyam-negi-1aab4a229/" target="_blank">
+                        <div class="social-link">
+                            <img src="/static/images/icons/linkedin.png" class="icon" /> &nbsp;&nbsp;LinkedIn
+                        </div>
+                    </a>
+                </div>
+                <div class="social-link-col">
+                    <a disabled>
+                        <div class="social-link disabled">
+                            <img src="/static/images/icons/instagram.png" class="icon" /> &nbsp;&nbsp;Instagram
+                        </div>
+                    </a>
+                    <a href="https://ctftime.org/user/172456" target="_blank">
+                        <div class="social-link">
+                            <img src="/static/images/icons/ctf.png" class="icon" /> &nbsp;&nbsp;CTFtime
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <div id="anon-seperator">
+                <div><span>========= OR =========</span></div><br />
+                <div id="anon-msg-text"><span><<-- Send me an anonymous feedback/message</span></div>
+            </div>
+        </div>
+        <div class="side-form flex-col">
+            <form id="feedbackform" method="POST">
+                <textarea id="message" name="feedback" rows="15" cols="50" maxlength=5000 oninput="typing()" required></textarea><br/>
+                <div><span>[ <span id="words">0</span>/5000 ]</span><input id="submit" type="submit" disabled /></div>
+            </form>
+            <div id="extra-comment">
+                <div class="comment bb">
+                    <p>Do mention your name and email if you want me to get back to you :] We can have a chat!!</p>
+                </div>
+                <div id="response" class="comment hidden-div">
+                    <p></p>
+                </div>    
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='/js/index.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='/js/writeupController.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='/js/fluctuate.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+body {
+	background-color: #111111;
+	color: wheat;
+}
+table {
+	width: 100%;
+}
+th {
+	font-size: 2rem;
+	font-style: italic;
+	padding: 1rem;
+}
+tr, td {
+	border: 1px solid white;
+	padding: 0.4rem;
+}
+
+tr:nth-child(even) {
+	background-color: #404040;
+}
+#container {
+	display: flex;
+	padding: 1rem;
+	flex-direction: column;
+	align-items: flex-end;
+}
+a {
+	text-decoration: none;
+	margin: 1rem 0;
+	padding: 0.4rem 1rem;
+	align-items: center;
+	width: fit-content;
+	color: black;
+	background-color: white;
+}
+a:hover {
+	background-color: black;
+	border: 1px solid white;
+	color: wheat;
+}

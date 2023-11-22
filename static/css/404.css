@@ -1,0 +1,70 @@
+body {
+	background-color: #111111;
+	user-select: none;
+}
+
+#background {
+	display: flex;
+	height: -webkit-fill-available;
+	justify-content: space-evenly;
+	color: white;
+	font-family: monospace;
+}
+
+#outer-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: auto 15rem;
+}
+
+#t404 {
+	display: flex;
+	width: 60%;
+	font-family: sans-serif;
+	justify-content: space-evenly;
+}
+
+.num-element {
+	display: inline-block;
+}
+
+.inner-check {
+	display: grid;
+	margin: 1px;
+	height: 20px;
+	width: 20px;
+}
+
+.outer-check div {
+	display: inline-block;
+}
+
+.set {
+	background-color: skyblue;
+}
+
+#error {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#error h1 {
+	text-align: center;
+	font-size: 5rem;
+	color: red;
+	padding: 0 1rem;
+	width: fit-content;
+}
+
+#error h1:hover {
+	color: greenyellow;
+}
+
+#message p {
+	font-size: 2rem;
+	margin: auto 5rem;
+	text-align: center;
+	overflow: visible;
+	word-break: break-word;
+}

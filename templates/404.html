@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>404 - Not found</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/404.css') }}" />
+</head>
+
+<body>
+<div id="background">
+    <div id="outer-container">
+        <div id="t404"></div>
+        <div id="error">
+            <h1>0100 0000 0100</h1>
+        </div>
+        <div id="message">
+            <p> {{ text }} </p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="{{ url_for('static', filename='/js/404.js') }}"></script>
+</body>
+</html>

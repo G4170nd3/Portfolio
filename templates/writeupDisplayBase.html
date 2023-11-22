@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>{{ writeup_data['Chall-head'] }} - writeup</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/writeup.css') }}">
+</head>
+
+<body>
+<div class="background">
+<div id="ctf-head">
+  <p>>_</p> {{ ctf_data }}
+</div>
+<div class="container">
+  <div>
+    <article class="writeup-headers">
+        <h1 id="chall-heading"><b>{{ writeup_data['Chall-head'] }}</b></h1>
+        <h3><i>{{ writeup_data['Chall-cat'] }}</i></h3>
+        <hr />
+        <br />
+        <div class="writeup-content">
+            {% for item in writeup_data['Chall-soln'] %}
+                {% if item['Type'] == "text" %}
+                    <p>{{ item['text'] }}</p>
+                {% elif item['Type'] == "inline-text" %}
+                    <span>{{ item['text'] }}</span>
+                {% elif item['Type'] == "code" %}
+                    {% if item['lang']!=null %}
+                        <div class="code-lang">{{ item['lang'] }}</div>
+                    {% endif %}
+                    <pre>{{ item['text'] }}</pre>
+                {% elif item['Type'] == "image" %}
+                    <img src="{{ url_for('static', filename=item['src']) }}" alt="{{ item['alt'] }}" class="writeup-img" />
+                {% elif item['Type'] == "break" %}
+                    <br />
+                {% elif item['Type'] == "link" %}
+                    <a href="{{ item['url'] }}" target="_blank">{{ item['text'] }}</a>
+                {% elif item["Type"] == "heading" %}
+                    <h2>{{ item['text'] }}</h2>
+                {% elif item["Type"] == "signature" %}
+                    <p class="signature">{{ item["text"] }}</p>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </article>
+  </div>
+</div>
+</div>
+</body>
+</html>
